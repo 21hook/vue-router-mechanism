@@ -90,6 +90,6 @@ A lifecycle hook is just that exposing a callback to be called when some state t
 MIT
 
 ## References
-[1] 
-[2]
-[3]
+[1] Wikipedia [Delegation](https://en.wikipedia.org/wiki/Delegation) <br>
+[2] Wikipedia [Factory method pattern](https://en.wikipedia.org/wiki/Factory_method_pattern)
+
