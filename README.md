@@ -16,13 +16,13 @@ the component lies. Create a path & route direct-address table, which is used to
 match the location in the <router-link> component. 
 
 ## Table of Contents
-1. [History inheritance](#)
-2. [History delegation](#)
-3. [VueRouter-factory method pattern](#)
-4. [Location matching](#)
-5. [Router lifecycle hooks](#)
+1. [History inheritance](#demo1-history-inheritancesource)
+2. [History delegation](#demo2-history-delegation-source)
+3. [VueRouter-factory method pattern](#demo3-vuerouter-factory-method-pattern-source)
+4. [Location matching](#demo4-location-matchingsource)
+5. [Router lifecycle hooks](#demo5-router-lifecycle-hooks-source)
 
-## Demo1: History inheritance([Source](https://))
+## Demo1: History inheritance([Source](https://github.com/21hook/vue-router-mechanism/tree/master/demo1/history))
 Some sample SPA routes:
 ```
 http://www.mysite.com/home#/header 
@@ -42,16 +42,16 @@ So, the class hierarchies of the location histories is:
         ╱           |           ╲
 AbstractHistory   HTML5History  HashHistory
 ```
-## Demo2: History delegation: ([Source](https://))
+## Demo2: History delegation: ([Source](https://github.com/21hook/vue-router-mechanism/tree/master/demo2/history))
 The concrete classes of History class create an agent to manipulate the window location(the client).
 Firs of all, initialize the window location in the constructor of the concrete classes - HashHistory or Html5History;
 Then, add some stack operations to manipulate the history stack.
 
-## Demo3: VueRouter-factory method pattern: ([Source](https://))
+## Demo3: VueRouter-factory method pattern: ([Source](https://github.com/21hook/vue-router-mechanism/tree/master/demo3))
 Use a factory method pattern to create VueRouter class, which encapsulates the creation of concrete History classes
 for the client.
 
-## Demo4: Location matching([Source](https://))
+## Demo4: Location matching([Source](https://github.com/21hook/vue-router-mechanism/tree/master/demo4))
 There are two input sources to mutate the active location history:
 1. click the <router-link> component, which is linked to a new location;
 2. the prev/next button to get the location in the location history stack
@@ -62,11 +62,11 @@ defined by users, then return the component & render it in the new page.
 If the prev/next button is clicked, the handler of the popstate event is triggered. It gets a location history from 
 the history stack. Again, it transitions to a new page.
 
-## Demo5 Router lifecycle hooks: ([Source](https://))
+## Demo5 Router lifecycle hooks: ([Source](https://github.com/21hook/vue-router-mechanism/tree/master/demo5/history))
 Expose onReady interface to receive success or error callback to be called when the router is navigated.
 A lifecycle hook is just that exposing a callback to be called when some state transition in the object is achieved.
 
-### Router architecture
+## Router architecture
 1. Init the matcher instance & bind the popState event
 ```       install the plugin                    setup the popstate  
      Vue --------------------> VueRouter ------------------------------>  HashHistory/Html5History 
