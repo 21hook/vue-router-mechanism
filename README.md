@@ -68,18 +68,19 @@ A lifecycle hook is just that exposing a callback to be called when some state t
 
 ## Router architecture
 1. Init the matcher instance & bind the popState event
-```       install the plugin                    setup the popstate  
+```       
+          install the plugin                    setup the popstate  
      Vue --------------------> VueRouter ------------------------------>  HashHistory/Html5History 
      
                                                                                     |
                                              History <-------------------------------
                                                        transition to a new location 
-     
 ```
 2. Call the push method of a history object to push a new location
 
-```                 push the current location into the history stack
-    <router-link> ---------------------------------------------------> HashHistory/Html5History 
+```            
+                 push the current location into the history stack
+  <router-link> ---------------------------------------------------> HashHistory/Html5History 
          
                                                                                     |
                                              History <-------------------------------
