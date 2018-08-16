@@ -1,5 +1,5 @@
 # Vue Routers
-> Design Patterns in Vue Routers
+> vue-router implmentation mechanism
 
 ## Key Concepts
 class inheritance, factory method pattern, delegation, 
